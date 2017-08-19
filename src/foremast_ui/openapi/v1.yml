@@ -1,13 +1,18 @@
 swagger: '2.0'
 info:
-  description: Web UI for test rendering [Foremast](https://foremast.readthedocs.io) configurations.
-  version: 1.0.0
   title: Foremast UI
+  version: 1.0.0
+  description: Web UI for test rendering
+    [Foremast](https://github.com/gogoair/foremast) (version
+    {{ foremast_version }}) configurations.
   contact:
     email: e4r7hbug@gmail.com
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+externalDocs:
+  description: Documentation hosted on Read the Docs.
+  url: https://foremast.readthedocs.io
 consumes:
   - application/json
 produces:

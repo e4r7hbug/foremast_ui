@@ -15,9 +15,9 @@ Install
 Running
 -------
 
-OpenAPI is available at http://127.0.0.1:8000/v1/ui/ after running with
-`gunicorn`.
+OpenAPI UI is available at http://127.0.0.1:5000/v1/ui/ by default.
 
 .. code-block:: bash
 
-   gunicorn foremast_ui.application:API
+   foremast_ui --help
+   foremast_ui

@@ -1,2 +1,2 @@
 include README.rst
-graft src/foremast_ui/static/
+graft src/foremast_ui/openapi/

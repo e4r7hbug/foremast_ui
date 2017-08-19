@@ -55,13 +55,21 @@ paths:
 definitions:
   applicationJson:
     type: object
+    required:
+      - app
     properties:
       app:
         type: object
+        required:
+          - app_description
+          - email
         properties:
           app_description:
             type: string
             example: Test application.
+          email:
+            type: string
+            example: dev@example.com
   pipelineJson:
     type: object
     required:

@@ -43,8 +43,6 @@ paths:
           description: Return application.json.
   /render_pipeline:
     post:
-      tags:
-        - pipeline
       summary: Render pipeline.json configuration.
       parameters:
         - name: pipeline_json

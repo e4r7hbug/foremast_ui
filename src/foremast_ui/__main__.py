@@ -1,7 +1,7 @@
 """Run Foremast web UI."""
 import click
 
-from .application import APP
+from .routes import APP
 
 
 @click.command()

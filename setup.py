@@ -12,9 +12,8 @@ setup(
     author_email='',
     install_requires=[
         'click',
-        'falsy',
+        'connexion',
         'foremast',
-        'gunicorn',
     ],
     packages=find_packages(where='src'),
     package_dir={'': 'src'},

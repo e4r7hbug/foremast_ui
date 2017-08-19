@@ -56,8 +56,12 @@ definitions:
   applicationJson:
     type: object
     properties:
-      name:
-        type: string
+      app:
+        type: object
+        properties:
+          app_description:
+            type: string
+            example: Test application.
   pipelineJson:
     type: object
     required:

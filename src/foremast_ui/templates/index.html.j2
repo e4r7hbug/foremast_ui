@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Foremast UI</title>
+  </head>
+  <body>
+    {% for section, items in application_json.items() %}
+      <h2>{{ section }}</h2>
+
+      <form class="" action="index.html" method="post">
+        {% if items is mapping %}
+          {% for key, value in items.items() %}
+            <input type="text" name="{{ key }}" value="{{ value }}">
+          {% endfor %}
+        {% else %}
+          <input type="text" name="{{ item }}" value="{{ item }}">
+        {% endif%}
+      </form>
+    {% endfor %}
+  </body>
+</html>

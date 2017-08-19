@@ -1,2 +1,3 @@
 include README.rst
 graft src/foremast_ui/openapi/
+graft src/foremast_ui/templates/

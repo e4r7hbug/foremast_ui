@@ -14,11 +14,10 @@ produces:
   - application/json
 basePath: "/v1"
 paths:
-  /render/pipeline:
+  /render_pipeline:
     post:
       tags:
         - pipeline
-      operationId: foremast_ui.api.v1.render.pipeline.post
       summary: Render pipeline.json configuration.
       parameters:
         - name: pipeline_json

@@ -1,0 +1,57 @@
+swagger: '2.0'
+info: Foremast UI - Configuration Generator
+title: Foremast UI
+version: '0.1'
+consumes:
+  - application/json
+produces:
+  - application/json
+basePath: "/v1"
+paths:
+  '/render/config':
+    post:
+      tags:
+        - configuration
+      operationId: foremast_ui.api.v1.render.configuration.post
+      summary: Render foremast configuration.
+      parameters:
+        - name: name
+          in: query
+          type: string
+          default: 'john'
+      responses:
+        200:
+          description: Return response
+  '/render/pipeline':
+    post:
+      tags:
+        - pipeline
+      operationId: foremast_ui.api.v1.render.pipeline.post
+      summary: Render pipeline.json configuration.
+      parameters:
+        - name: pipeline_json
+          in: body
+          description: pipeline.json contents to render.
+          required: true
+          validationId: foremast_ui.api.v1.render.pipeline.validate
+          schema:
+            $ref: '#/definitions/pipelineExample'
+            type: object
+            default:
+              owner_email: example@email.com
+              notifications:
+                slack: '#devchannel'
+      responses:
+        200:
+          description: Return pipeline.json.
+
+definitions:
+  pipelineExample:
+    type: object
+    required:
+      - owner_email
+    properties:
+      owner_email:
+        type: string
+        default: example@email.com
+        example: test@gmail.com

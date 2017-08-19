@@ -1,12 +1,6 @@
-"""Main FAL.S.Y application."""
-import pathlib
+"""Main application."""
+import connexion
 
-from falsy.falsy import FALSY
 
-STATIC_DIR = pathlib.Path(__file__).parent / 'static'
-API_FILE = STATIC_DIR / 'v1.yml'
-
-APP = FALSY(static_dir=str(STATIC_DIR))
-APP.swagger(str(API_FILE), theme='impress')
-
-API = APP.api
+APP = connexion.App(__package__, specification_dir='openapi')
+APP.add_api('v1.yml', resolver=connexion.resolver.RestyResolver('api'))

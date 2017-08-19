@@ -25,22 +25,31 @@ paths:
           description: pipeline.json contents to render.
           required: true
           schema:
-            type: object
-            default:
-              owner_email: example@email.com
-              notifications:
-                slack: '#devchannel'
+            $ref: '#/definitions/pipelineJson'
       responses:
         200:
           description: Return pipeline.json.
 
 definitions:
-  pipelineExample:
+  pipelineJson:
     type: object
     required:
+      - documentation
       - owner_email
+      - notifications
     properties:
+      documentation:
+        type: string
+        example: https://foremast.readthedocs.io
       owner_email:
         type: string
-        default: example@email.com
-        example: test@gmail.com
+        example: example@email.com
+      notifications:
+        type: object
+        properties:
+          slack:
+            type: string
+            example: '#devchannel'
+      type:
+        type: string
+        example: ec2

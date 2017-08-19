@@ -22,6 +22,10 @@ paths:
   /render_application:
     post:
       summary: Render application.json configuration.
+      description: Combines user level application.json files with Foremast
+        defined and built in templates. See [application-master-$account.json](
+        https://foremast.readthedocs.io/en/latest/configuration_files/application_json.html)
+        for more details.
       parameters:
         - name: env
           in: query
@@ -44,6 +48,10 @@ paths:
   /render_pipeline:
     post:
       summary: Render pipeline.json configuration.
+      description: Combines user level pipeline.json files with Foremast defined
+        and built in templates. See [pipeline.json](
+        https://foremast.readthedocs.io/en/latest/configuration_files/pipeline_json/index.html)
+        for more details.
       parameters:
         - name: pipeline_json
           in: body

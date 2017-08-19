@@ -18,6 +18,16 @@ paths:
     post:
       summary: Render application.json configuration.
       parameters:
+        - name: env
+          in: query
+          type: string
+          required: true
+          default: dev
+        - name: git_uri
+          in: query
+          type: string
+          required: true
+          default: git@github.com:gogoair/foremast.git
         - name: application_json
           in: body
           required: true
